@@ -1,0 +1,23 @@
+body{
+    background-color: beige;   
+}
+
+#p1{
+    color: rgba(8, 92, 8, 0.61);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#img1{
+    width: 250px;
+    margin: 10px 10px 0px;    
+
+}
+.greenText{
+    color: red;
+    background-image: url(Asserts/Lobos1.jpg);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-size: cover; */  /* Tag para deixa a imag no tamanho inteiro do elemento*/
+    background-attachment: fixed;
+
+}
