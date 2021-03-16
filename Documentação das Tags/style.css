@@ -12,12 +12,49 @@ body{
     margin: 10px 10px 0px;    
 
 }
+
+#div1{
+    background-image: url(Asserts/Lobos1.jpg);
+        background-repeat: no-repeat;
+        /* background-position: center; 
+        background-size: cover; */
+        /* Tag para deixa a imag no tamanho inteiro do elemento*/
+        background-attachment: fixed;
+
+}
 .greenText{
     color: red;
-    background-image: url(Asserts/Lobos1.jpg);
-    background-repeat: no-repeat;
-    /* background-position: center; */
-    /* background-size: cover; */  /* Tag para deixa a imag no tamanho inteiro do elemento*/
-    background-attachment: fixed;
+}
 
+#cm{
+    background-color: blue;
+    height: 5cm;
+    width: 5cm;
+}
+#px{
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+}
+#pt{
+    background-color: green;
+    height:5pt;
+    width: 5pt;
+}
+
+#pc{
+    background-color: red;
+    height: 2pc;
+    width: 2pc;
+}
+
+.container{
+    font-size: 20px;
+    width: 50vw; /* Modifica o tamanho baseado na largura da tela */
+    background-color: lightblue;
+}
+.inside{
+    font-size: 2em;
+    width: 50%;
+    background-color: lightcoral;
 }
