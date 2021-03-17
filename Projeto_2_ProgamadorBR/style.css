@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+}
+.card{
+    background-image: url(Assets/backgorund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    font-size: 18px;
+    width: 400px;
+    height: 200px;
+    padding: 1px 20px;
+    margin: auto;
+    margin-top: 15%;
+}
+
+h1{
+    font-size: 22px;
+    text-align: justify;
+    font-family:'Courier New', Courier, monospace;
+    margin-left: 1.2em;
+    padding-top: 0.7em;
+}
+
+#yt{
+    list-style-image: url(Assets/social/Youtube.png);
+}
+#insta{
+    list-style-image: url(Assets/social/Insta.png);
+}
+
+#twitter{
+    list-style-image: url(Assets/social/Twitter.png);
+}
+
+.links{
+    text-align: center;
+    text-decoration: none;
+}
+.links:visited{
+    color: black;
+}
