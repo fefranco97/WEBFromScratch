@@ -1,10 +1,23 @@
 body{
     background-color: beige;   
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+  font-family: valorant;
+  src: url(fonts/Valorant-Font.ttf);
+}
+
+@font-face {
+  font-family: bit;
+  src: url(fonts/VCR_OSD_MONO_1.001.ttf);
 }
 
 #p1{
     color: rgba(8, 92, 8, 0.61);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: bit, valorant, Arial, Helvetica, sans-serif;
+    font-style: italic;
 }
 
 #img1{
@@ -14,16 +27,15 @@ body{
 }
 
 #div1{
-    background-image: url(Asserts/Lobos1.jpg);
-        background-repeat: no-repeat;
-        /* background-position: center; 
-        background-size: cover; */
-        /* Tag para deixa a imag no tamanho inteiro do elemento*/
-        background-attachment: fixed;
-
+    background-image: url(Asserts/wolfHowlling.jpg);
+    background-repeat: no-repeat;
+    /* background-position: center; 
+    background-size: cover; */
+    /* Tag para deixa a imag no tamanho inteiro do elemento*/
+    background-attachment: fixed;
 }
 .greenText{
-    color: red;
+    color: rgb(221, 39, 39);
 }
 
 #cm{
@@ -48,7 +60,7 @@ body{
     width: 2pc;
 }
 
-.container{
+.cont{
     font-size: 20px;
     width: 50vw; /* Modifica o tamanho baseado na largura da tela */
     background-color: lightblue;
@@ -58,3 +70,75 @@ body{
     width: 50%;
     background-color: lightcoral;
 }
+
+#padding{
+    background-color: red;
+    padding: 10px;
+}
+#margin{
+    background-color: blue;
+    color: white;
+    margin: 10px;
+}
+
+table{
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+td{
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.table_header{
+    font-size: 20px;
+    background-color: gray;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.table_body{
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+}
+
+/* Box Model */
+.container{
+  background-color: red;
+  padding: 5px;
+  border: 5px solid blue;
+  margin: 10px;
+}
+
+.content{
+    background-color: gray;
+    border: 5px solid green;
+    /* outline: 5px solid green;   --> Não faz parte do box model, ou seja, sobreescreve tudo */
+    /* margin: 5px; */
+    padding: 5px;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 10px solid blue; /* Irá acresentar 10px para esquerda e para direita, então o tamano total da div seria de 120px e nãod de 100px*/
+}
+.square2{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+.square3{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    padding: 10px;
+    border: 10px solid blue;
+    box-sizing: border-box;  /* Vincula o tamanho máximo ao mesmo do tamanho da caixa */
+}
+
