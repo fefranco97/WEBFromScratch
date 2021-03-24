@@ -6,12 +6,12 @@ body{
 
 @font-face {
   font-family: valorant;
-  src: url(fonts/Valorant-Font.ttf);
+  src: url(../fonts/Valorant-Font.ttf);
 }
 
 @font-face {
   font-family: bit;
-  src: url(fonts/VCR_OSD_MONO_1.001.ttf);
+  src: url(../fonts/VCR_OSD_MONO_1.001.ttf);
 }
 
 #p1{
@@ -27,7 +27,7 @@ body{
 }
 
 #div1{
-    background-image: url(Asserts/wolfHowlling.jpg);
+    background-image: url(../Asserts/wolfHowlling.jpg);
     background-repeat: no-repeat;
     /* background-position: center; 
     background-size: cover; */
@@ -122,23 +122,77 @@ td{
 }
 
 .square{
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
-    border: 10px solid blue; /* Irá acresentar 10px para esquerda e para direita, então o tamano total da div seria de 120px e nãod de 100px*/
-}
-.square2{
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
+    border: 10px solid blue; /* Irá acresentar 10px para esquerda e para direita, então o tamano total da div seria de 120px e não de 100px*/
 }
 
 .square3{
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
     padding: 10px;
     border: 10px solid blue;
     box-sizing: border-box;  /* Vincula o tamanho máximo ao mesmo do tamanho da caixa */
 }
 
+
+
+/* Tipo de Positions */
+.relative{
+    position: relative; /* Relativo a posição inicial do elemento */
+    left: 20px;
+}
+.static{
+    position: static; /* Estático, não se movimento com as demais opções (left, right, up, down) */
+}
+.fixed{
+    position: fixed; /* Se baseia no tamnaho da janela*/
+    right: 20px;
+    bottom: 20px;
+}
+.sticky{
+    position: sticky;
+}
+.absolute {
+    position: absolute;
+}
+.quadrado{
+   width: 100px;
+   height: 100px;
+   display: inline-block;
+}
+.bg-blue{
+    background-color: blue;
+}
+.bg-red{
+    background-color: red;
+}
+.bg-green {
+    background-color: green;
+}
+.bg-yellow {
+    background-color: yellow;
+}
+
+
+.card{
+    float: left;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid green;
+    margin: 2px;
+    
+}
+.c1{
+    line-height: 200px;
+}
+.c2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.card2{
+    clear: left;
+    float: left;
+    border: 2px solid blue;
+    padding: 100px 156px 100px 156px;
+}
