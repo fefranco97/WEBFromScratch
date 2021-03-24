@@ -1,0 +1,36 @@
+#form{
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding: 13px;
+    border: 2px solid green;
+}
+
+.padrao{
+    font-family: valorant, 'Times New Roman', Times, serif;
+    margin: 10px;
+}
+
+.input-padrao{
+    width: 300px;
+    position: relative;
+    left: 24px;
+}
+
+.enviar {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    width: 120px;
+    border: 1px solid black ;
+    left: 10px;
+}
+
+.form-radius{
+    margin-left: 20px;
+}
+
+#select{
+    margin-left: 20px;
+}
