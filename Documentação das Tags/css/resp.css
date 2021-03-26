@@ -1,0 +1,84 @@
+@font-face {
+    font-family: valorant;
+    src: url(../fonts/Valorant-Font.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+.header {
+    overflow: hidden;
+    margin: auto;
+    padding: 15px;
+    width: 80%;
+    background-color: #a32ba3;
+    font-size: 18px;
+    font-family: valorant, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.logo {
+    float: left;
+}
+
+.menu {
+    float: right;
+    list-style: none;
+    margin: 15px 0px 0px 0px;
+    padding: 0;
+}
+
+.p1{
+    position: relative;
+    text-align: center;
+    margin: 20px;
+}
+.img1{
+    width: 50px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+    margin-left: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/*Responsividade por tamanho de tela, media queries
+  Sempre começecar a fazer mobile first
+*/
+@media screen and (max-width: 820px) {
+.header{
+    background-color: gray;
+}
+}
+
+@media screen and (max-width: 620px) {
+    .logo {
+        float: none;
+        text-align: center;
+    }
+    .menu{
+        float: none;
+        text-align: center;
+    }
+    li {
+        float: none;
+        background-color: red;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+}

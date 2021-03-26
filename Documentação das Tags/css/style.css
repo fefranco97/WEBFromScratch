@@ -1,0 +1,198 @@
+body{
+    background-color: beige;   
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+  font-family: valorant;
+  src: url(../fonts/Valorant-Font.ttf);
+}
+
+@font-face {
+  font-family: bit;
+  src: url(../fonts/VCR_OSD_MONO_1.001.ttf);
+}
+
+#p1{
+    color: rgba(8, 92, 8, 0.61);
+    font-family: bit, valorant, Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+#img1{
+    width: 250px;
+    margin: 10px 10px 0px;    
+
+}
+
+#div1{
+    background-image: url(../Asserts/wolfHowlling.jpg);
+    background-repeat: no-repeat;
+    /* background-position: center; 
+    background-size: cover; */
+    /* Tag para deixa a imag no tamanho inteiro do elemento*/
+    background-attachment: fixed;
+}
+.greenText{
+    color: rgb(221, 39, 39);
+}
+
+#cm{
+    background-color: blue;
+    height: 5cm;
+    width: 5cm;
+}
+#px{
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+}
+#pt{
+    background-color: green;
+    height:5pt;
+    width: 5pt;
+}
+
+#pc{
+    background-color: red;
+    height: 2pc;
+    width: 2pc;
+}
+
+.cont{
+    font-size: 20px;
+    width: 50vw; /* Modifica o tamanho baseado na largura da tela */
+    background-color: lightblue;
+}
+.inside{
+    font-size: 2em;
+    width: 50%;
+    background-color: lightcoral;
+}
+
+#padding{
+    background-color: red;
+    padding: 10px;
+}
+#margin{
+    background-color: blue;
+    color: white;
+    margin: 10px;
+}
+
+table{
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+td{
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.table_header{
+    font-size: 20px;
+    background-color: gray;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.table_body{
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+}
+
+/* Box Model */
+.container{
+  background-color: red;
+  padding: 5px;
+  border: 5px solid blue;
+  margin: 10px;
+}
+
+.content{
+    background-color: gray;
+    border: 5px solid green;
+    /* outline: 5px solid green;   --> Não faz parte do box model, ou seja, sobreescreve tudo */
+    /* margin: 5px; */
+    padding: 5px;
+}
+
+.square{
+    border: 10px solid blue; /* Irá acresentar 10px para esquerda e para direita, então o tamano total da div seria de 120px e não de 100px*/
+}
+
+.square3{
+    padding: 10px;
+    border: 10px solid blue;
+    box-sizing: border-box;  /* Vincula o tamanho máximo ao mesmo do tamanho da caixa */
+}
+
+
+
+/* Tipo de Positions */
+.relative{
+    position: relative; /* Relativo a posição inicial do elemento */
+    left: 20px;
+}
+.static{
+    position: static; /* Estático, não se movimento com as demais opções (left, right, up, down) */
+}
+.fixed{
+    position: fixed; /* Se baseia no tamnaho da janela*/
+    right: 20px;
+    bottom: 20px;
+}
+.sticky{
+    position: sticky;
+}
+.absolute {
+    position: absolute;
+}
+.quadrado{
+   width: 100px;
+   height: 100px;
+   display: inline-block;
+}
+.bg-blue{
+    background-color: blue;
+}
+.bg-red{
+    background-color: red;
+}
+.bg-green {
+    background-color: green;
+}
+.bg-yellow {
+    background-color: yellow;
+}
+
+
+.card{
+    float: left;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid green;
+    margin: 2px;
+    
+}
+.c1{
+    line-height: 200px;
+}
+.c2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.card2{
+    clear: left;
+    float: left;
+    border: 2px solid blue;
+    padding: 100px 156px 100px 156px;
+}
