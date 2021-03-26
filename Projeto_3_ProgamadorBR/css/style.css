@@ -213,6 +213,7 @@ body {
     }
 
     .ip-select {
+        border-radius: 10px;
         border: 2px solid rgba(220, 220, 220, 0.5);
         margin: 10px 10px 10px 29px;
         padding: 10px;
@@ -220,10 +221,11 @@ body {
     }
 
     .ip-main {
+        border-radius: 10px;
         border: 2px solid rgba(220, 220, 220, 0.5);
         margin: 10px 10px 0px 29px;
         padding: 10px;
-        width: 260px;
+        width: 255px;
     }
 
     .sp-pdr {
@@ -233,7 +235,7 @@ body {
 
     .txt-area {
         resize: none;
-        width: 274px;
+        width: 257px;
         height: 117px;
     }
 
