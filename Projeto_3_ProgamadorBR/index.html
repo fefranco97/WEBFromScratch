@@ -11,81 +11,82 @@
 
 <body>
     <header>
-        <h1 class="h1-header" >Recuperação tributaria para empresas do simples nacional</h1>
+        <h1 class="h1-header">Recuperação tributária para empresas do simples nacional</h1>
     </header>
 
     <main>
+        <img src="assets/people.jpg" alt="pessoas">
         <section class="main">
-            <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus suscipit risus, et sodales arcu blandit dictum. Quisque rhoncus velit viverra elementum pharetra. Donec vel nisl velit. Nunc non massa ut diam tincidunt commodo eu vitae mi. Morbi augue mauris, pretium et euismod in, tincidunt non sem. Etiam quis nisi tincidunt, imperdiet ante vel, scelerisque velit. Quisque sodales rutrum nulla at dignissim. Sed mattis rhoncus felis vitae aliquet. Duis at dui ut nunc condimentum scelerisque.</p>
+            <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus suscipit risus, et
+                sodales arcu blandit dictum. Quisque rhoncus velit viverra elementum pharetra. Donec vel nisl velit.
+                Nunc non massa ut diam tincidunt commodo eu vitae mi.</p>
+            <section class="form">
+                <form action="" method="GET">
+                    <input type="text" name="Nome" placeholder="Nome" class="ip-nome ip-main"><br>
+                    <input type="email" name="Email" placeholder="E-mail" class="ip-email ip-main"><br>
+                    <select name="Estados" class="states ip-select">
+                        <option value="Acre" selected>Acre</option>
+                        <option value="Alagoas">Alagoas</option>
+                        <option value="Amapá">Amapá</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Bahia">Bahia</option>
+                        <option value="Ceará">Ceará</option>
+                        <option value="Distrito Federal">Distrito Federal</option>
+                        <option value="Espírito Santo">Espírito Santo</option>
+                        <option value="Goiás">Goiás</option>
+                        <option value="Maranhão">Maranhão</option>
+                        <option value="Mato Grosso">Mato Grosso</option>
+                        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                        <option value="Minas Gerais">Minas Gerais</option>
+                        <option value="Pará">Pará</option>
+                        <option value="Paraíba">Paraíba</option>
+                        <option value="Paraná">Paraná</option>
+                        <option value="Pernambuco">Pernambuco</option>
+                        <option value="Piauí">Piauí</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                        <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                        <option value="Rondônia">Rondônia</option>
+                        <option value="Roraima">Roraima</option>
+                        <option value="Santa Catarina">Santa Catarina</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Sergipe">Sergipe</option>
+                        <option value="Tocantins">Tocantins</option>
+                    </select><br>
+
+                    <span class="sp-pdr">Qual seu segmento de atuação?</span><br>
+                    <select name="ramo" class="ramo ip-select">
+                        <option value="bar">Bares</option>
+                        <option value="cm-bebida">Comerciantes de Bebidas</option>
+                        <option value="dogarias">Drogaria</option>
+                        <option value="lj-auto">Loja de autopeças</option>
+                        <option value="minimercados">Minimercados</option>
+                        <option value="padaria">Padaria</option>
+                        <option value="petshop">Pet Shop</option>
+                        <option value="perfumaria">Perfumaria</option>
+                        <option value="postosGasolina">Posto de Gasolina</option>
+                        <option value="restaurante">Restaurante</option>
+                        <option value="rnv-pneu">Revendedor de Pneumáticos</option>
+                        <option value="supermercados">Supermercados</option>
+                    </select><br>
+                    <span class="sp-pdr">Digite sua dúvida aqui</span><br>
+                    <textarea placeholder="Digite sua dúvida" name="duvida" class="txt-area ip-main" cols="40"
+                        rows="7"></textarea><br>
+                    <input id="botao" type="submit" value="Saiba mais">
+                </form>
+            </section>
         </section>
-
-        <section class="form">
-            <form action="" method="GET">
-                <input type="text" name="Nome" placeholder="Nome" id="ip-nome">
-                <input type="email" name="Email" placeholder="E-mail" id="ip-email">
-                <select name="Estados" id="states">
-                    <option value="Acre" selected>Acre</option>
-                    <option value="Alagoas">Alagoas</option>
-                    <option value="Amapá">Amapá</option>
-                    <option value="Amazonas">Amazonas</option>
-                    <option value="Bahia">Bahia</option>
-                    <option value="Ceará">Ceará</option>
-                    <option value="Distrito Federal">Distrito Federal</option>
-                    <option value="Espírito Santo">Espírito Santo</option>
-                    <option value="Goiás">Goiás</option>
-                    <option value="Maranhão">Maranhão</option>
-                    <option value="Mato Grosso">Mato Grosso</option>
-                    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-                    <option value="Minas Gerais">Minas Gerais</option>
-                    <option value="Pará">Pará</option>
-                    <option value="Paraíba">Paraíba</option>
-                    <option value="Paraná">Paraná</option>
-                    <option value="Pernambuco">Pernambuco</option>
-                    <option value="Piauí">Piauí</option>
-                    <option value="Rio de Janeiro">Rio de Janeiro</option>
-                    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-                    <option value="Rondônia">Rondônia</option>
-                    <option value="Roraima">Roraima</option>
-                    <option value="Santa Catarina">Santa Catarina</option>
-                    <option value="São Paulo">São Paulo</option>
-                    <option value="Sergipe">Sergipe</option>
-                    <option value="Tocantins">Tocantins</option>
-                </select>
-
-                <span class="sp-ramo" >Qual seu segmento de atuação?</span>
-                <select name="ramo" id="ip-ramo">
-                    <option value="bar">Bares</option>
-                    <option value="cm-bebida">Comerciantes de Bebidas</option>
-                    <option value="dogarias">Drogaria</option>
-                    <option value="lj-auto">Loja de autopeças</option>
-                    <option value="minimercados">Minimercados</option>
-                    <option value="padaria">Padaria</option>
-                    <option value="petshop">Pet Shop</option>
-                    <option value="perfumaria">Perfumaria</option>
-                    <option value="postosGasolina">Posto de Gasolina</option>
-                    <option value="restaurante">Restaurante</option>
-                    <option value="rnv-pneu">Revendedor de Pneumáticos</option>
-                    <option value="supermercados">Supermercados</option>
-                </select>
-                <span class="sp-duv" >Digite sua dúvida aqui</span>
-                <textarea name="duvida" id="txt-area" cols="30" rows="10"></textarea>
-                <input id="botao" type="submit" value="Saiba mais">
-
-            </form>
-        
-        </section>
-
-        <section class="palestrante">
-
-        <h2 class="nm-palestrante">Sobre Solange Franco</h2>
-
-        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus suscipit risus, et sodales arcu blandit dictum. Quisque rhoncus velit viverra elementum pharetra. Donec vel nisl velit. Nunc non massa ut diam tincidunt commodo eu vitae mi. Morbi augue mauris, pretium et euismod in, tincidunt non sem. Etiam quis nisi tincidunt, imperdiet ante vel, scelerisque velit. Quisque sodales rutrum nulla at dignissim. Sed mattis rhoncus felis vitae aliquet. Duis at dui ut nunc condimentum scelerisque.</p>
-        </section>
-
     </main>
 
     <footer>
+        <section class="pla">
+
+            <h2 class="nm-pla">Sobre Solange Franco</h2>
+
+            <p class="txt-pla">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus suscipit risus, et
+                sodales arcu blandit dictum. Quisque rhoncus velit viverra elementum pharetra. Donec vel nisl velit.
+                Nunc non massa ut diam tincidunt commodo eu vitae mi.</p>
+        </section>
     </footer>
 </body>
 
