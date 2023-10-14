@@ -1,0 +1,107 @@
+*,
+body {
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #555;
+}
+
+h1,
+h2 {
+  color: #111;
+}
+
+a {
+  color: #fd8a24;
+  text-decoration: none;
+  margin: auto;
+  font-weight: 700;
+  line-height: 10px;
+  font-size: 20px;
+}
+
+p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  padding: 16px 0;
+}
+
+figure {
+  margin: 40px 0;
+  padding: 0;
+}
+figure > img {
+  width: 100%;
+}
+
+footer {
+  background-color: #333333;
+  min-height: 3.5rem;
+}
+
+.topBar {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #333333;
+  text-align: center;
+  padding: 8px;
+  border-bottom: 5px solid #fd8a24;
+}
+
+.mainContainer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+.headerContainer,
+.mainArticle {
+  margin: auto;
+}
+.mainArticle {
+  width: 45rem;
+}
+
+.headerTitle > h1 {
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -0.15625rem;
+  margin-bottom: 2rem;
+}
+.headerContent > h2 {
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.headerSignature {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.headerSignature > span {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.headerSignature > .lastUpdate {
+  font-weight: 400;
+  color: lightgray;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+.social-icon {
+  width: 20px;
+  padding: 10px 10px 10px 0;
+}
+
+.fig-caption {
+  font-size: 12px;
+}
+
+.link-spacing {
+  margin: 12px 0 24px 0;
+}
