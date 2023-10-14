@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/resp.css">
-    <link rel="stylesheet" href="css/form.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/resp.css" />
+    <link rel="stylesheet" href="css/form.css" />
     <title>Formulários</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="logo">
-            <a href="index.html"> <img class="img1" src="Asserts/Back.png" alt="Voltar"> </a>
-        </div>
-        <nav class="nav">
-            <ul class="menu">
-                <li>Home</li>
-                <li>Contato</li>
-                <li>Comprar</li>
-                <li>Quem somos</li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <a href="index.html">
+          <img class="img1" src="Asserts/Back.png" alt="Voltar" />
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="menu">
+          <li>Home</li>
+          <li>Contato</li>
+          <li>Comprar</li>
+          <li>Quem somos</li>
+        </ul>
+      </nav>
     </header>
 
     <div id="form">
-        <form action="" method="GET">
-            <spam class="padrao">Nome:</spam><input class="input-padrao" type="text" name="nome"><br><br>
-            <spam class="padrao">Email:</spam><input class="input-padrao" type="email" name="email"><br><br>
-            <spam class="padrao">Telefone:</spam><input style="width: 300px;" type="tel" maxlength="11"
-                name="Telefone"><br><br>
-            <spam class="padrao">Selecione o seu sexo:</spam><br><br>
-            <input class="form-radius" type="radio" name="gender" value="m">Masculino
-            <input class="form-radius" type="radio" name="gender" value="f">Feminino
-            <input class="form-radius" type="radio" name="gender" value="ni">Prefiro não dizer<br><br>
-            <spam class="padrao">Selecione o seu estado</spam><br><br>
-            <select id="select" name="Estado">
-                <option value="SP">São Paulo</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="ES">Espirito Santo</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="BA">Bahia</option>
-                <option value="AC">Acre</option>
-                <option value="RS">Rio grande do Sul</option>
-                <option value="MT">Mato Grosso</option>
-            </select><br><br>
-            <spam class="padrao">Média de valor</spam><br>
-            0<input type="range" value="200" name="valor" min="0" max="200">200
+      <form action="" method="GET">
+        <span class="padrao">Nome:</span
+        ><input class="input-padrao" type="text" name="nome" /><br /><br />
+        <span class="padrao">Email:</span
+        ><input class="input-padrao" type="email" name="email" /><br /><br />
+        <span class="padrao">Telefone:</span
+        ><input
+          style="width: 300px"
+          type="tel"
+          maxlength="11"
+          name="Telefone"
+        /><br /><br />
+        <span class="padrao">Selecione o seu sexo:</span><br /><br />
+        <input
+          class="form-radius"
+          type="radio"
+          name="gender"
+          value="m"
+        />Masculino
+        <input
+          class="form-radius"
+          type="radio"
+          name="gender"
+          value="f"
+        />Feminino
+        <input
+          class="form-radius"
+          type="radio"
+          name="gender"
+          value="ni"
+        />Prefiro não dizer<br /><br />
+        <span class="padrao">Selecione o seu estado</span><br /><br />
+        <select id="select" name="Estado">
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="ES">Espirito Santo</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="BA">Bahia</option>
+          <option value="AC">Acre</option>
+          <option value="RS">Rio grande do Sul</option>
+          <option value="MT">Mato Grosso</option></select
+        ><br /><br />
+        <span class="padrao">Média de valor</span><br />
+        0<input type="range" value="200" name="valor" min="0" max="200" />200
 
-
-            <br><br><br>
-            <input class="enviar" type="submit" value="Enviar">
-            <input class="enviar" type="reset" value="Reiniciar">
-
-        </form>
+        <br /><br /><br />
+        <input class="enviar" type="submit" value="Enviar" />
+        <input class="enviar" type="reset" value="Reiniciar" />
+      </form>
     </div>
-</body>
-
+  </body>
 </html>
