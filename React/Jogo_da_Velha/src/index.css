@@ -17,25 +17,19 @@ code {
     monospace;
 }
 ol,
-ul {
-  padding-left: 30px;
+li {
+  padding-left: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
-.board-container {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-  margin-top: 10rem;
+.game-container {
+  display: inline-block;
 }
 
 .board-row:after {
   clear: both;
   content: "";
   display: table;
-}
-
-.status {
-  margin-bottom: 10px;
 }
 
 .square {
@@ -53,6 +47,21 @@ ul {
   width: 150px;
 }
 
+.button-float {
+  padding: 0.75rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 0px;
+}
+
+.status {
+  margin-left: 1rem;
+}
+
 .square:focus {
   outline: none;
 }
@@ -64,8 +73,11 @@ ul {
 .game {
   display: flex;
   flex-direction: row;
+  max-width: fit-content;
+  margin: auto;
 }
 
 .game-info {
+  margin-top: 2rem;
   margin-left: 20px;
 }
