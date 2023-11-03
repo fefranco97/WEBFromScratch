@@ -10,34 +10,23 @@ body {
   padding: 0;
 }
 
-.pla {
-  overflow: auto;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(42, 42, 42);
+footer {
+  text-align: center;
+  padding: 40px;
+  background-color: #202121;
 }
 
 .container-pla {
-  padding: 3rem;
-  max-width: 60%;
+  display: inline-block;
+  color: white;
+  max-width: 40%;
+  margin-left: 2rem;
+  text-align: left;
 }
 
 .img-pla {
-  max-width: 30%;
-  float: left;
-  margin-right: 1.25rem;
+  width: 160px;
   border-radius: 10px;
-}
-.hd-pla {
-  color: #ffff;
-  font-weight: bold;
-}
-.txt-pla {
-  text-align: left;
-  padding: 10px;
-  margin: 10px;
-  color: #ffff;
 }
 
 header {
