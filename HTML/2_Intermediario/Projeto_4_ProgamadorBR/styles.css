@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  max-width: 360px;
+  margin: auto;
+  padding: 24px;
+  background-color: aliceblue;
+  border-radius: 12px;
+  margin-top: 100px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-top: 3px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+label {
+  font-weight: 600;
+}
+
+.inputBtn {
+  width: 50%;
+  margin: auto;
+  border: 0;
+  border-radius: 6px;
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+.inputBtn:hover {
+  background-color: rgba(173, 216, 230, 0.61);
+  cursor: pointer;
+}
