@@ -80,6 +80,11 @@ footer {
   margin-top: 1rem;
 }
 
+.container-ingredientes > button:hover {
+  background-color: #f16a27c7;
+  cursor: pointer;
+}
+
 .itens {
   padding: 1.2rem;
 }

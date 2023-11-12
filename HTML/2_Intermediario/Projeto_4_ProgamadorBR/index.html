@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,23 +10,24 @@
 </head>
 
 <body>
-    <form action="submit" method="post">
+    <form action="" method="">
         <h2>Churrascômetro</h2>
         <label for="adulto"> Adulto
-            <input id="adulto" type="number" placeholder="Insira a quantidade de adultos">
+            <input id="adulto" type="number" placeholder="Insira a quantidade de adultos" min="0" value="0"
+                onchange="valueHandler(value, 'adulto')">
         </label>
-
         <label for="crianca">Criança
-            <input id="crianca" type="number" placeholder="Insira a quantidade de adultos">
+            <input id="crianca" type="number" placeholder="Insira a quantidade de adultos" min="0" value="0"
+                onchange="valueHandler(value, 'crianca')">
         </label>
         <label for="horas"> Horas
-            <input id="horas" type="number" placeholder="Insira a quantidade de Horas">
+            <input id="horas" type="number" placeholder="Insira a quantidade de Horas" min="0" value="0"
+                onchange="valueHandler(value, 'horas')">
         </label>
-        <label for="Calcular">
-            <input class="inputBtn" type="button" value="Calcular" >
+        <label for="calcular">
+            <input id="calcular" onclick="onCalculateButton()" class="inputBtn" type="button" value="Calcular">
         </label>
     </form>
-
 </body>
 
 </html>
