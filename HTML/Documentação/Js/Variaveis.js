@@ -22,3 +22,7 @@ const constante = "teste"; // Const não podem ser redeclaradas, sempre precisam
 
 // Sting => Sempre estão entre aspas simples ou duplas "isso é uma string" 'isso tbm é uma string', números dentro de '' também são strings
 // Number => nunca estão em aspas 0,1,2,3,4,5 e representam números
+
+console.log(typeof variavel);
+console.log(typeof variavelLet);
+console.log(typeof constante);
