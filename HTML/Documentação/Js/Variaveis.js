@@ -1,10 +1,10 @@
 // Declarações var são de escopo de função, o que significa que a variável é acessível em qualquer lugar dentro da função em que é declarada,
 // mesmo antes de ser declarada. Isso é conhecido como elevação.
-var variavel;
+var variavel = 1;
 
 // Declarações let são de escopo de bloco, o que significa que a variável só é acessível dentro do bloco em que é declarada.
 // Um bloco é uma seção de código cercada por chaves ({}).
-let variavelLet;
+let variavelLet = true;
 
 // Aqui estão algumas boas práticas para usar let e var:
 

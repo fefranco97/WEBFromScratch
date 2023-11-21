@@ -1,5 +1,24 @@
 let qntAdultos, qntCriancas, qntHoras;
 
+document.body.innerHTML = `<form action="" method="">
+        <h2>Churrascômetro</h2>
+        <label for="adulto"> Adulto
+            <input id="adulto" type="number" placeholder="Insira a quantidade de adultos" min="0" value="0"
+                onchange="valueHandler(value, 'adulto')">
+        </label>
+        <label for="crianca">Criança
+            <input id="crianca" type="number" placeholder="Insira a quantidade de adultos" min="0" value="0"
+                onchange="valueHandler(value, 'crianca')">
+        </label>
+        <label for="horas"> Horas
+            <input id="horas" type="number" placeholder="Insira a quantidade de Horas" min="0" value="0"
+                onchange="valueHandler(value, 'horas')">
+        </label>
+        <label for="calcular">
+            <input id="calcular" onclick="onCalculateButton()" class="inputBtn" type="button" value="Calcular">
+        </label>
+    </form>`;
+
 function valueHandler(value, type) {
   switch (type) {
     case "adulto":
