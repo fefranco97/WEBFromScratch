@@ -60,7 +60,7 @@ function renderHTML() {
             <input id="calcular" onclick="onCalculateButton()" class="inputBtn" type="button" value="Calcular">
         </label>
     </form>
-    <div class="totalContainer">
+    <div>
         <p id="carne"></p>
         <p id="bebida"></p>
     </div>
