@@ -1,15 +1,22 @@
 let qntAdultos, qntCriancas, qntHoras;
 
-function valueHandler(value, type) {
-  switch (type) {
+window.onload = () => {
+  let input = document.getElementsByTagName("input");
+  for (const element of input) {
+    element.addEventListener("change", valueHandler);
+  }
+};
+
+function valueHandler() {
+  switch (this.id) {
     case "adulto":
-      qntAdultos = value;
+      qntAdultos = this.value;
       break;
     case "crianca":
-      qntCriancas = value;
+      qntCriancas = this.value;
       break;
     case "horas":
-      qntHoras = value;
+      qntHoras = this.value;
       break;
     default:
       break;
@@ -45,16 +52,13 @@ function renderHTML() {
   document.body.innerHTML = `<form action="" method="">
         <h2>Churrascômetro</h2>
         <label for="adulto"> Adulto
-            <input id="adulto" type="number" placeholder="Insira a quantidade de adultos" min="0" value="0"
-                onchange="valueHandler(value, 'adulto')">
+            <input id="adulto" type="number" placeholder="Insira a quantidade de adultos" min="0" value="0">
         </label>
         <label for="crianca">Criança
-            <input id="crianca" type="number" placeholder="Insira a quantidade de adultos" min="0" value="0"
-                onchange="valueHandler(value, 'crianca')">
+            <input id="crianca" type="number" placeholder="Insira a quantidade de adultos" min="0" value="0">
         </label>
         <label for="horas"> Horas
-            <input id="horas" type="number" placeholder="Insira a quantidade de Horas" min="0" value="0"
-                onchange="valueHandler(value, 'horas')">
+            <input id="horas" type="number" placeholder="Insira a quantidade de Horas" min="0" value="0">
         </label>
         <label for="calcular">
             <input id="calcular" onclick="onCalculateButton()" class="inputBtn" type="button" value="Calcular">

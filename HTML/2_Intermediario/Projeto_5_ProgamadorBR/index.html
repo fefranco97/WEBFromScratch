@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Sorteador Mix</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h2>Sorteador de Times</h2>
+            <textarea name="nomes" id="nomes"
+                placeholder="Escreva aqui os nomes que gostaria de sortear, separados por quebra de linha(Enter)."></textarea>
+        </div>
+
+        <div id="resultContainer" class="resultContainer">
+            <div class="teams">
+                <p class="label">Time A</p>
+                <div class="teamContainer">
+                    <p class="time teamA"></p>
+                    <p class="time teamA"></p>
+                    <p class="time teamA"></p>
+                    <p class="time teamA"></p>
+                    <p class="time teamA"></p>
+                </div>
+            </div>
+            <div class="teams">
+                <p class="label">Time B</p>
+                <div class="teamContainer">
+                    <p class="time teamB"></p>
+                    <p class="time teamB"></p>
+                    <p class="time teamB"></p>
+                    <p class="time teamB"></p>
+                    <p class="time teamB"></p>
+                </div>
+            </div>
+        </div>
+        <button id="sortear">SORTEAR</button>
+        <button id="reSortear">SORTEAR NOVAMENTE</button>
+
+    </main>
+</body>
+
+</html>
