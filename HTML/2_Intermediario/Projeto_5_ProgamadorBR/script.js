@@ -1,65 +1,71 @@
-window.onload = () => {
-  let textArea = document.getElementById("nomes");
-  let btnSortear = document.getElementById("sortear");
-  let btnReSortear = document.getElementById("reSortear");
-  textArea.addEventListener("change", handlerChange);
-  btnSortear.addEventListener("click", sortear);
-  btnReSortear.addEventListener("click", reSortear);
-};
-
 let players = [];
 let teamA = [];
 let teamB = [];
 
-function handlerChange() {
-  players = this.value.split(/\r?\n/);
-  players = players.filter((a) => {
-    return a.trim() !== "";
-  });
-  teamB = players;
+let textArea, btnSortear, btnReSortear, resultContainer;
+
+window.onload = () => {
+  textArea = document.getElementById("nomes");
+  btnSortear = document.getElementById("sortear");
+  btnReSortear = document.getElementById("reSortear");
+  resultContainer = document.getElementById("resultContainer");
+
+  textArea.addEventListener("change", handlePlayerChange);
+  btnSortear.addEventListener("click", sortearTeams);
+  btnReSortear.addEventListener("click", resetAndSortTeams);
+};
+
+function handlePlayerChange(event) {
+  players.length = 0;
+
+  for (const line of event.target.value.split(/\r?\n/)) {
+    const trimmedLine = line.trim();
+    if (trimmedLine) {
+      players.push(trimmedLine);
+    }
+  }
 }
 
-function sortear() {
+function sortearTeams() {
+  if (players.length == 10) {
+    teamB = players.slice();
+
+    for (let i = 0; i < 5; i++) {
+      const winner = Math.floor(Math.random() * teamB.length);
+      teamA.push(teamB[winner]);
+      teamB.splice(winner, 1);
+    }
+
+    updateUi();
+  } else {
+    alert("Por favor insira 10 nomes");
+  }
+}
+
+function resetAndSortTeams() {
+  teamA.length = 0;
+  teamB = players.slice();
+
   for (let i = 0; i < 5; i++) {
-    let winner = Math.floor(Math.random() * players.length);
-    teamA.push(players[winner]);
+    const winner = Math.floor(Math.random() * teamB.length);
+    teamA.push(teamB[winner]);
     teamB.splice(winner, 1);
   }
-  render();
+
+  updateUi();
 }
 
-function reSortear() {
-  console.log("cliquei no reSortear");
-}
-
-const render = () => {
-  let ta = document.getElementById("nomes");
-  let resultContainer = document.getElementById("resultContainer");
-  let btnSortear = document.getElementById("sortear");
-  let btnReSortear = document.getElementById("reSortear");
-
-  createTeamContainer("teamA");
-  createTeamContainer("teamB");
-
-  ta.style.display = "none";
+function updateUi() {
+  textArea.style.display = "none";
   resultContainer.style.display = "flex";
   btnSortear.style.display = "none";
   btnReSortear.style.display = "block";
-};
 
-const createTeamContainer = (time) => {
-  let team = document.getElementsByClassName(time);
-  let count = 0;
+  const teamAContainer = document.querySelectorAll(".teamA");
+  const teamBContainer = document.querySelectorAll(".teamB");
 
-  if (time === "teamA") {
-    for (const p of team) {
-      p.innerText = teamA[count];
-      count++;
-    }
-  } else {
-    for (const p of team) {
-      p.innerText = teamB[count];
-      count++;
-    }
+  for (let i = 0; i < 5; i++) {
+    teamAContainer[i].innerText = teamA[i];
+    teamBContainer[i].innerText = teamB[i];
   }
-};
+}

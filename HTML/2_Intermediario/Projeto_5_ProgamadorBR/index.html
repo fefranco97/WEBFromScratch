@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
     <title>Sorteador Mix</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <header>
+      <h2>Sorteador para mix CSGO</h2>
+    </header>
     <main>
-        <div class="container">
-            <h2>Sorteador de Times</h2>
-            <textarea name="nomes" id="nomes"
-                placeholder="Escreva aqui os nomes que gostaria de sortear, separados por quebra de linha(Enter)."></textarea>
-        </div>
+      <div class="container">
+        <textarea
+          name="nomes"
+          id="nomes"
+          placeholder="Insira o nome dos jogadores, separados por Enter."
+        ></textarea>
+      </div>
 
-        <div id="resultContainer" class="resultContainer">
-            <div class="teams">
-                <p class="label">Time A</p>
-                <div class="teamContainer">
-                    <p class="time teamA"></p>
-                    <p class="time teamA"></p>
-                    <p class="time teamA"></p>
-                    <p class="time teamA"></p>
-                    <p class="time teamA"></p>
-                </div>
-            </div>
-            <div class="teams">
-                <p class="label">Time B</p>
-                <div class="teamContainer">
-                    <p class="time teamB"></p>
-                    <p class="time teamB"></p>
-                    <p class="time teamB"></p>
-                    <p class="time teamB"></p>
-                    <p class="time teamB"></p>
-                </div>
-            </div>
+      <div id="resultContainer" class="resultContainer hidden">
+        <div>
+          <div class="legend">
+            <img src="assets/images/ct.png" alt="Logo Counter Terrorist" />
+            <p class="label">CT</p>
+          </div>
+          <div class="teamContainer">
+            <p class="team teamA"></p>
+            <p class="team teamA"></p>
+            <p class="team teamA"></p>
+            <p class="team teamA"></p>
+            <p class="team teamA"></p>
+          </div>
         </div>
-        <button id="sortear">SORTEAR</button>
-        <button id="reSortear">SORTEAR NOVAMENTE</button>
-
+        <div>
+          <div class="legend">
+            <img src="assets/images/tr.png" alt="Logo Terrorist" />
+            <p class="label">TR</p>
+          </div>
+          <div class="teamContainer">
+            <p class="team teamB"></p>
+            <p class="team teamB"></p>
+            <p class="team teamB"></p>
+            <p class="team teamB"></p>
+            <p class="team teamB"></p>
+          </div>
+        </div>
+      </div>
+      <button id="sortear" type="button">SORTEAR</button>
+      <button id="reSortear" class="hidden" type="button">
+        SORTEAR NOVAMENTE
+      </button>
     </main>
-</body>
-
+  </body>
 </html>

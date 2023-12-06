@@ -1,16 +1,38 @@
+@font-face {
+  font-family: csgo;
+  src: url(assets/fonts/csgo.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+  font-family: csgo, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 3px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f1f1f1;
+}
+
+header {
+  background-color: #35a5a5;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 main {
-  margin: auto;
-  width: 50vw;
-}
-h2 {
-  text-align: center;
-  margin: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 1rem auto;
+  min-width: 50vw;
 }
 
 button {
@@ -19,7 +41,6 @@ button {
   border: none;
   background-color: rgb(35, 165, 165);
   color: white;
-  font-weight: bold;
   text-align: center;
   display: block;
   margin: 1.5rem auto;
@@ -34,11 +55,16 @@ textarea {
   width: 100%;
   height: 300px;
   box-sizing: border-box;
+  line-height: 1.5rem;
+}
+
+img {
+  width: 50px;
+  margin-right: 0.7rem;
 }
 
 .resultContainer {
-  display: none;
-  /* display: flex; */
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
@@ -54,19 +80,23 @@ textarea {
 .teamContainer {
   border: 1px solid rgb(216, 213, 213);
   border-radius: 6px;
-  width: 250px;
+  width: 300px;
   padding: 1rem 2rem;
   box-shadow: 12px 15px 19px 0px rgba(216, 213, 213, 0.75);
-  -webkit-box-shadow: 12px 15px 19px 0px rgba(216, 213, 213, 0.75);
-  -moz-box-shadow: 12px 15px 19px 0px rgba(216, 213, 213, 0.75);
 }
-.time {
+.team {
   font-size: 18px;
   padding: 0.75rem 0;
   text-align: center;
-  font-weight: bold;
 }
 
-#reSortear {
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem;
+}
+
+.hidden {
   display: none;
 }
