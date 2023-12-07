@@ -2,11 +2,11 @@
   color: red;
 } */
 
-li {
+.item {
   list-style: none;
 }
 
-li::before {
+.item::before {
   /*Sempre vem antes do elemento*/
   content: "";
   display: inline-block;
@@ -19,7 +19,7 @@ li::before {
   background-size: cover;
 }
 
-li::after {
+.item::after {
   /*Sempre vai após o elemento*/
   content: "";
   display: inline-block;
