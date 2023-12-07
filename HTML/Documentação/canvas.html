@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/resp.css">
+    <title>Canvas</title>
+</head>
+
+<style>
+    .tela {
+        background-color: beige;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1.5rem;
+    }
+
+    #lobo {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img class="img1" src="Asserts/Back.png" alt="Voltar" />
+            </a>
+        </div>
+        <nav class="nav">
+            <ul class="menu">
+                <li>Home</li>
+                <li>Contato</li>
+                <li>Comprar</li>
+                <li>Quem somos</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <canvas id="linha" class="tela" width="500" height="500"></canvas>
+        <canvas id="retangulo" class="tela" width="500" height="500"></canvas>
+        <canvas id="beginPath" class="tela" width="500" height="500"></canvas>
+    </div>
+    <div class="container">
+        <canvas id="circulo" class="tela" width="500" height="500"></canvas>
+        <canvas id="circulo2" width="500" height="500"></canvas>
+    </div>
+
+    <div class="container">
+        <img id="lobo" src="Asserts/Lobos1.jpg" alt="">
+        <canvas id="img" width="500" height="500"></canvas>
+        <canvas id="img2" width="500" height="500"></canvas>
+    </div>
+
+    <script src="Js/Canvas.js"></script>
+</body>
+
+</html>

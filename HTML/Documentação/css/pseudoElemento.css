@@ -1,0 +1,38 @@
+/* p::first-line {
+  color: red;
+} */
+
+li {
+  list-style: none;
+}
+
+li::before {
+  /*Sempre vem antes do elemento*/
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  background-image: url(../Asserts/google.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+li::after {
+  /*Sempre vai após o elemento*/
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  background-image: url(../Asserts/google.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+p::selection {
+  /*Sempre que um elemento for selecionado ficará com esses atributos*/
+  background-color: yellow;
+  color: orangered;
+}
