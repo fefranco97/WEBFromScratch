@@ -1,61 +1,71 @@
+let players = [];
+let teamA = [];
+let teamB = [];
+
+let textArea, btnSortear, btnReSortear, resultContainer;
+
 window.onload = () => {
-  let textArea = document.getElementById("nomes");
-  let btnSortear = document.getElementById("sortear");
-  let btnReSortear = document.getElementById("reSortear");
-  let resultContainer = document.getElementById("resultContainer");
-  textArea.addEventListener("change", handlerChange);
-  btnSortear.addEventListener("click", sortear);
-  btnReSortear.addEventListener("click", reSortear);
+  textArea = document.getElementById("nomes");
+  btnSortear = document.getElementById("sortear");
+  btnReSortear = document.getElementById("reSortear");
+  resultContainer = document.getElementById("resultContainer");
 
-  let players = [];
-  let teamA = [];
-  let teamB = [];
+  textArea.addEventListener("change", handlePlayerChange);
+  btnSortear.addEventListener("click", sortearTeams);
+  btnReSortear.addEventListener("click", resetAndSortTeams);
+};
 
-  function handlerChange() {
-    players = this.value.split(/\r?\n/);
-    players = players.filter((a) => {
-      return a.trim() !== "";
-    });
-    teamB = players;
+function handlePlayerChange(event) {
+  players.length = 0;
+
+  for (const line of event.target.value.split(/\r?\n/)) {
+    const trimmedLine = line.trim();
+    if (trimmedLine) {
+      players.push(trimmedLine);
+    }
   }
+}
 
-  function sortear() {
+function sortearTeams() {
+  if (players.length == 10) {
+    teamB = players.slice();
+
     for (let i = 0; i < 5; i++) {
-      let winner = Math.floor(Math.random() * players.length);
-      teamA.push(players[winner]);
+      const winner = Math.floor(Math.random() * teamB.length);
+      teamA.push(teamB[winner]);
       teamB.splice(winner, 1);
     }
-    render();
+
+    updateUi();
+  } else {
+    alert("Por favor insira 10 nomes");
+  }
+}
+
+function resetAndSortTeams() {
+  teamA.length = 0;
+  teamB = players.slice();
+
+  for (let i = 0; i < 5; i++) {
+    const winner = Math.floor(Math.random() * teamB.length);
+    teamA.push(teamB[winner]);
+    teamB.splice(winner, 1);
   }
 
-  function reSortear() {
-    console.log("cliquei no reSortear");
+  updateUi();
+}
+
+function updateUi() {
+  textArea.style.display = "none";
+  resultContainer.style.display = "flex";
+  btnSortear.style.display = "none";
+  btnReSortear.style.display = "block";
+
+  const teamAContainer = document.querySelectorAll(".teamA");
+  const teamBContainer = document.querySelectorAll(".teamB");
+
+  for (let i = 0; i < 5; i++) {
+    teamAContainer[i].innerText = teamA[i];
+    teamBContainer[i].innerText = teamB[i];
   }
-
-  const render = () => {
-    createTeamContainer("teamA");
-    createTeamContainer("teamB");
-
-    textArea.style.display = "none";
-    resultContainer.style.display = "flex";
-    btnSortear.style.display = "none";
-    btnReSortear.style.display = "block";
-  };
-
-  const createTeamContainer = (time) => {
-    let team = document.getElementsByClassName(time);
-    let count = 0;
-
-    if (time === "teamA") {
-      for (const p of team) {
-        p.innerText = teamA[count];
-        count++;
-      }
-    } else {
-      for (const p of team) {
-        p.innerText = teamB[count];
-        count++;
-      }
-    }
-  };
-};
+}

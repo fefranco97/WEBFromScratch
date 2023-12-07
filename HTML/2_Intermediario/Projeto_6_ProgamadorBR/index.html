@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Usando videos</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <body>
+    <header>
+      <h2></h2>
+    </header>
+    <main>
+      <h1>Tag Video com controlers personalizados</h1>
+      <div class="container">
+        <video
+          id="video1"
+          poster="assets/images/posterVideo.jpeg"
+          class="video"
+          onmouseenter="mostarIcones()"
+          onmouseleave="esconderIcones()"
+          src="assets/videos/Eminem - The Real Slim Shady (Official Video - Dirty Version).mp4"
+        ></video>
+        <div id="controles">
+          <img
+            onclick="retroceder()"
+            src="assets/images/desfazer.png"
+            alt=""
+            class="btn"
+          />
+          <img
+            onclick="avancar()"
+            src="assets/images/refazer.png"
+            alt=""
+            class="btn"
+          />
+          <img
+            onclick="diminuir_vel()"
+            src="assets/images/sinal-de-menos.png"
+            alt=""
+            class="btn"
+          />
+          <img
+            onclick="aumentar_vel()"
+            src="assets/images/sinal-de-mais.png"
+            alt=""
+            class="btn"
+          />
+          <img
+            onclick="play()"
+            src="assets/images/botao-play.png"
+            alt=""
+            class="btn"
+          />
+          <img
+            onclick="stop()"
+            src="assets/images/botao-de-pausa.png"
+            alt=""
+            class="btn"
+          />
+        </div>
+      </div>
 
-<body>
+      <h1>Tag IFrame link do youtube</h1>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/YVkUvmDQ3HY?si=FMB4_jnJ9NPURxMy"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </main>
 
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
