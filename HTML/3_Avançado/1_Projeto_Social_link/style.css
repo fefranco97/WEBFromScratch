@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-size: 14px;
+}
+
+body {
+  height: 100%;
+  background: url(Assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Sora", sans-serif;
+}
+
+.container {
+  max-width: 540px;
+  margin: auto;
+  padding: 1.4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gradient {
+  background: linear-gradient(to right, #5578ba, #40a376);
+}
+
+.profile {
+  width: 10em;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: 400;
+  font-size: 2em;
+  margin: 16px 0;
+}
+.description {
+  font-size: 1em;
+  color: #919193;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+  gap: 1.5em;
+}
+
+.list-item {
+  font-size: 1.2em;
+  height: 4em;
+  border-radius: 2em;
+  display: flex;
+}
+
+.link {
+  padding: 0 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.link > img {
+  width: 1.2em;
+}
+
+footer {
+  display: flex;
+  gap: 1.5em;
+}
+
+.contact {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.contact > img {
+  width: 1.8em;
+}
+
+@media screen and (min-width: 815px) {
+  html {
+    font-size: 16px;
+  }
+}
