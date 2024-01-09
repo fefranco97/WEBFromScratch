@@ -1,1 +1,1 @@
-// Falando um pouco sobre objetos:
+// Falando um pouco sobre Arrays - High order functions
