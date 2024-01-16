@@ -30,3 +30,21 @@ console.log(valores.reduce((v1, v2) => v1 + v2));
 
 const chaves = Object.keys(person); // Retorna somente os valores das chaves sem as propriedades de um objeto em forma de array
 console.log(chaves);
+
+// Como Desestructurar um objeto
+
+let aluno = {
+  nome: "Fulano",
+  sobrenome: "Beltrano",
+  matricula: 1234,
+  telefone: 9876543219,
+  cidade: "Cid",
+  estado: "Estado",
+};
+
+let { matricula } = aluno;
+
+let { ...copia } = aluno;
+
+console.log(matricula);
+console.log(copia);

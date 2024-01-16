@@ -1,7 +1,6 @@
 // Falando um pouco sobre Arrays - High order functions
 
 //  Filter
-
 let aluno = [];
 
 function novoAluno(nome, idade) {
@@ -83,3 +82,26 @@ alunoC.idade = 25;
 
 // Atribuição por valor, faz um cópia do elemento original, e qualquer alteração na Cópia ão vai refletir no original
 // Atribuição por referência, não faz cópia, é como se desse  um novo apelido para o objeto/Array original. Qualuqer modificação no novo elemento altera também o original
+
+// Spread operator (  ... )
+
+// Faz uma cópia de um array ou objeto:
+
+let spraedAlunos = { ...alunos, alunoB };
+console.log(spraedAlunos);
+
+// Utilizando Reduce operator .reduce()
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let sumNumbers = numbers.reduce(
+  (primeiroNumero, segundoNumero) => primeiroNumero + segundoNumero
+);
+
+function somaTotalIdadeAlunos(total, aluno) {
+  return total + aluno.idade;
+}
+
+console.log(alunos.reduce(somaTotalIdadeAlunos, 0));
+
+console.log(sumNumbers);
