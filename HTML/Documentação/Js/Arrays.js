@@ -1,3 +1,4 @@
+"useStrict";
 // Falando um pouco sobre Arrays - High order functions
 
 //  Filter
@@ -6,6 +7,20 @@ let aluno = [];
 function novoAluno(nome, idade) {
   return { nome, idade };
 }
+
+function newFilter(array) {
+  let newArray = [];
+  for (let index of array) {
+    if (index >= 30 && index <= 60) {
+      newArray.push(index);
+    }
+  }
+  return newArray;
+}
+
+let novosAlunos = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+console.log(newFilter(novosAlunos));
 
 let alunos = [
   novoAluno("Mario", 23),
@@ -20,13 +35,32 @@ let alunos = [
 function temMenosDeTrinta(aluno) {
   return aluno.idade < 30;
 }
+
 let alunosComMenosDe30 = alunos.filter(temMenosDeTrinta);
-console.log(alunos.filter(() => alunos.idade > 30));
+console.log(alunos.filter((aluno) => aluno.idade > 30));
 
 // Map
-function nomeEIdade(aluno) {
+function nomeIdade(aluno) {
   return aluno.nome + " tem " + aluno.idade + " anos";
 }
+
+let mapIdades = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110];
+
+function newMap(array) {
+  let newArray = [];
+  for (let index of array) {
+    if (index >= 30 && index <= 60) {
+      newArray.push(index);
+    } else {
+      newArray.push(0);
+    }
+  }
+  return newArray;
+}
+
+console.log(newMap(mapIdades));
+
+console.log(mapIdades.map((idade) => (idade >= 30 && idade <= 60 ? idade : 0)));
 
 function alunoDaqui5Anos(aluno) {
   // Essa função funciona perfeitamente sem alterar o array original
@@ -46,7 +80,7 @@ function alunoDaqui5Anos(aluno) {
   // Isso só acontece em objetos e arrays, em tipos primitivos(Int, string, boolean) isso não acontece
 }
 
-console.log(alunos.map(() => nomeEIdade));
+console.log(alunos.map(nomeIdade));
 
 // Então, como devemos proceder para realizar uma cópia real do array ou objeto?
 // Arrays possuem o método Slice, onde ele recupera uma parte do array, mas se não passar uma indice, ele cópia todo array
@@ -97,6 +131,18 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let sumNumbers = numbers.reduce(
   (primeiroNumero, segundoNumero) => primeiroNumero + segundoNumero
 );
+
+function soma(array) {
+  let result = 0;
+
+  for (const index of array) {
+    result += index;
+  }
+
+  return result;
+}
+
+console.log(soma(numbers));
 
 function somaTotalIdadeAlunos(total, aluno) {
   return total + aluno.idade;
