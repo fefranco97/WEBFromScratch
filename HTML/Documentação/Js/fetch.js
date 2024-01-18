@@ -1,6 +1,6 @@
 const config = {
   url: "https://openexchangerates.org/api/latest.json",
-  app_id: "",
+  app_id: "0",
   prettyprint: false,
   show_alternative: true,
   options: { method: "GET", headers: { accept: "application/json" } },
@@ -41,12 +41,22 @@ window.onload = async () => {
     const amount = document.getElementById("value").value;
     const currency = document.getElementById("currencies").value;
 
-    let value = amount * lastHourRates[currency];
-
-    value = (Math.round(value * 100) / 100).toFixed(2);
+    let value = (
+      Math.round(amount * lastHourRates[currency] * 100) / 100
+    ).toFixed(2);
+    value = formatAmount(value);
 
     document.getElementById(
       "result"
     ).innerHTML = `Valor convertido para ${currency}: ${value}`;
+  }
+
+  function formatAmount(amount) {
+    amount = amount
+      .toString()
+      .replace(".", ",")
+      .replace(/^0+/, "")
+      .replace(/(?!\.)(\d{1,3})(?=(\d{3})+(?!\d))/g, "$&.");
+    return amount;
   }
 };

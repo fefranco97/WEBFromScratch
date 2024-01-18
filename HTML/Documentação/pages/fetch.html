@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/resp.css" />
+    <link rel="stylesheet" href="../css/fetch.css">
     <script src="../Js/fetch.js"></script>
     <title>Fetch JS</title>
 </head>
@@ -19,16 +20,17 @@
     </header>
 
 
-    <div id="containar">
+    <div id="container">
 
         <form method="post">
             <label for="value">
-                <span>Valor em dolar</span>
                 <input id="value" type="number" step="0.01" min="0" placeholder="Digite o valor em dolar">
             </label>
-            <select name="currencies" id="currencies">
-                <option value="moeda">Escolha uma moeda...</option>
-            </select>
+            <label for="value">
+                <select name="currencies" id="currencies">
+                    <option value="moeda">Escolha uma moeda...</option>
+                </select>
+            </label>
             <button id="btn" type="button">
                 <span>Enviar</span>
             </button>
