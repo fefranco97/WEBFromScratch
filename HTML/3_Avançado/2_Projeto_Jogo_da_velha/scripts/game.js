@@ -1,3 +1,22 @@
+let estatisticas = {
+  partida: {
+    partidas: 0,
+    empates: 0,
+  },
+  jogador1: {
+    vitorias: 0,
+    derrotas: 0,
+  },
+  jogador2: {
+    vitorias: 0,
+    derrotas: 0,
+  },
+};
+let board = ["", "", "", "", "", "", "", "", ""];
+let vezDoJogador = 0;
+let jogadores = ["x", "o"];
+let jogoEmAndamento = true;
+
 const lines = [
   [0, 1, 2], // Linha 1
   [3, 4, 5], // Linha 2
@@ -9,117 +28,62 @@ const lines = [
   [2, 4, 6], // Diagonal 2
 ];
 
-let board = ["", "", "", "", "", "", "", "", ""];
+function verificaJogador(position) {
+  if (board[position] == "") {
+    board[position] = jogadores[vezDoJogador];
+    vezDoJogador = vezDoJogador === 0 ? 1 : 0;
+  }
+  renderizaTela();
+}
 
-window.onload = () => {
-  let isXnext = true;
-  let jogoEmAndamento = true;
-
-  const tabuleiro = document.querySelector("#tabuleiro");
-  const quadrados = Array.from(tabuleiro.children);
-
-  const restGame = document.querySelector("#reset-game");
-  restGame.addEventListener("click", () => {
-    limpaTabuleiro();
-    isXnext = true;
-  });
-
-  const restStats = document.querySelector("#rest-stats");
-  restStats.addEventListener("click", () => {
-    limpaTabuleiro();
-    limpaEstatisticas();
-    isXnext = true;
-  });
-
-  quadrados.forEach((quadrado) => {
-    quadrado.addEventListener("click", (e) => {
-      if (!jogoEmAndamento) {
-        alert("Jogo finalizado! Inicie um novo jogo");
-        return;
-      }
-      verificaJogador(e.target);
-      verificaJogo(board);
-    });
-  });
-
-  function verificaJogador(quadrado) {
-    if (!isXnext) {
-      try {
-        quadrado.children[0].classList.add("o");
-        board[quadrado.id] = "O";
-        isXnext = !isXnext;
-      } catch (error) {
-        alert("Já existe uma jogada nesse posição");
-      }
-    } else {
-      try {
-        quadrado.children[0].classList.add("x");
-        board[quadrado.id] = "X";
-        isXnext = !isXnext;
-      } catch (error) {
-        alert("Já existe uma jogada nesse posição");
-      }
+function verificaVencedor() {
+  for (let i = 0; i < lines.length; i++) {
+    const [posicao1, posicao2, posicao3] = lines[i];
+    if (
+      board[posicao1] &&
+      board[posicao1] === board[posicao2] &&
+      board[posicao1] === board[posicao3]
+    ) {
+      return board[posicao1];
     }
   }
+  return null;
+}
 
-  function verificaVencedor(board) {
-    for (let i = 0; i < lines.length; i++) {
-      const [a, b, c] = lines[i];
-      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-        return board[a];
-      }
-    }
-    return null;
-  }
-
-  function verificaJogo(board) {
-    const vencedor = verificaVencedor(board);
-    if (vencedor) {
-      if (vencedor === "X") {
+function verificaJogo() {
+  const vencedor = verificaVencedor();
+  if (vencedor) {
+    if (vencedor === "x") {
+      setTimeout(() => {
         alert(`O jogador 1 venceu`);
-        jogoEmAndamento = false;
-        estatisticas.partida.partidas++;
-        estatisticas.jogador1.vitorias++;
-        estatisticas.jogador2.derrotas++;
-      } else {
-        alert(`O jogador 2 venceu`);
-        jogoEmAndamento = false;
-        estatisticas.partida.partidas++;
-        estatisticas.jogador2.vitorias++;
-        estatisticas.jogador1.derrotas++;
-      }
-    } else if (verificaEmpate(board)) {
+      }, 100);
       jogoEmAndamento = false;
-      alert(`Deu velha!!!`);
       estatisticas.partida.partidas++;
-      estatisticas.partida.empates++;
+      estatisticas.jogador1.vitorias++;
+      estatisticas.jogador2.derrotas++;
+    } else {
+      setTimeout(() => {
+        alert(`O jogador 2 venceu`);
+      }, 100);
+      jogoEmAndamento = false;
+      estatisticas.partida.partidas++;
+      estatisticas.jogador2.vitorias++;
+      estatisticas.jogador1.derrotas++;
     }
-    renderizaEstatisticas();
+  } else if (verificaEmpate()) {
+    jogoEmAndamento = false;
+    setTimeout(() => {
+      alert(`Deu velha!!!`);
+    }, 100);
+    estatisticas.partida.partidas++;
+    estatisticas.partida.empates++;
   }
+  renderizaEstatisticas();
+}
 
-  function limpaTabuleiro() {
-    quadrados.forEach((quadrado) => {
-      quadrado.children[0].classList.remove("o");
-      quadrado.children[0].classList.remove("x");
-    });
-    board = ["", "", "", "", "", "", "", "", ""];
-    jogoEmAndamento = true;
+function verificaEmpate() {
+  if (!board.includes("")) {
+    return true;
   }
-
-  function limpaEstatisticas() {
-    estatisticas.partida.partidas = 0;
-    estatisticas.partida.empates = 0;
-    estatisticas.jogador1.vitorias = 0;
-    estatisticas.jogador1.derrotas = 0;
-    estatisticas.jogador2.vitorias = 0;
-    estatisticas.jogador2.derrotas = 0;
-    renderizaEstatisticas();
-  }
-
-  function verificaEmpate(board) {
-    if (!board.includes("")) {
-      return true;
-    }
-    return false;
-  }
-};
+  return false;
+}
