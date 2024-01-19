@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="script.js"></script>
     <title>Jogo da velha</title>
 </head>
@@ -16,46 +16,62 @@
     </header>
 
     <main>
+        <div class="general-stats">
+            <p>Total de partidas: <span class="result">0</span></p>
+            <p>Total de empates: <span class="result">0</span> </p>
+        </div>
         <div class="container">
             <div class="stats-container">
-                <h2>Jogador 1</h2>
+                <h2>Jogador 1 ⚔️</h2>
                 <div class="stats">
-                    <p>Total de partidas: <span class="result">0</span></p>
                     <p>Total de vitórias: <span class="result">0</span></p>
                     <p>Total de derrotas: <span class="result">0</span></p>
-                    <p>Total de empates: <span class="result">0</span></p>
                 </div>
             </div>
             <div id="tabuleiro">
-                <div class="linha">
-                    <div class="coluna"></div>
-                    <div class="coluna"></div>
-                    <div class="coluna"></div>
+
+                <div id="0" class="quadrado">
+                    <div></div>
                 </div>
-                <div class="linha">
-                    <div class="coluna"></div>
-                    <div class="coluna"></div>
-                    <div class="coluna"></div>
+                <div id="1" class="quadrado">
+                    <div></div>
                 </div>
-                <div class="linha">
-                    <div class="coluna"></div>
-                    <div class="coluna"></div>
-                    <div class="coluna"></div>
+                <div id="2" class="quadrado">
+                    <div></div>
                 </div>
+
+                <div id="3" class="quadrado">
+                    <div></div>
+                </div>
+                <div id="4" class="quadrado">
+                    <div></div>
+                </div>
+                <div id="5" class="quadrado">
+                    <div></div>
+                </div>
+
+                <div id="6" class="quadrado">
+                    <div></div>
+                </div>
+                <div id="7" class="quadrado">
+                    <div></div>
+                </div>
+                <div id="8" class="quadrado">
+                    <div></div>
+                </div>
+
             </div>
             <div class="stats-container">
-                <h2>Jogador 2</h2>
+                <h2>Jogador 2 🛡️</h2>
                 <div class="stats">
-                    <p>Total de partidas: <span class="result">0</span> </p>
                     <p>Total de vitórias: <span class="result">0</span> </p>
                     <p>Total de derrotas: <span class="result">0</span> </p>
-                    <p>Total de empates: <span class="result">0</span> </p>
                 </div>
             </div>
         </div>
         <div class="buttons-container">
-            <button type="button">Reiniciar partida</button>
-            <button type="button">Limpar Estatisticas</button>
+            <button id="reset-game" type="button">Reiniciar partida</button>
+            <button id="rest-stats" type="button">Limpar Estatisticas</button>
         </div>
     </main>
 
