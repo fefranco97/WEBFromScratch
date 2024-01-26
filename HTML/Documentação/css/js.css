@@ -19,3 +19,7 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+.card > p {
+  color: black;
+}
