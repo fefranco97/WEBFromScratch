@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes changeColor {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+
+@keyframes changeColorPercent {
+  0% {
+    background-color: red;
+    width: 200px;
+  }
+  50% {
+    background-color: yellow;
+    width: 400px;
+  }
+  100% {
+    background-color: blue;
+    width: 200px;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 800px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 2rem;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  animation-name: changeColor;
+  animation-duration: 3s;
+}
+
+.box1 {
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  animation-name: changeColorPercent;
+  animation-duration: 3s;
+}
+.box2 {
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  animation-name: changeColor;
+  animation-duration: 3s;
+}
+.box3 {
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  animation-name: changeColorPercent;
+  animation-duration: 6s;
+  animation-delay: -3s;
+  animation-fill-mode: forwards;
+}
+.box4 {
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  animation-name: changeColorPercent;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.box5 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  animation: move 3s linear 0s 3 normal forwards;
+}
+
+.div1 {
+  animation-timing-function: linear;
+}
+.div2 {
+  animation-timing-function: ease;
+}
+.div3 {
+  animation-timing-function: ease-in;
+}
+.div4 {
+  animation-timing-function: ease-out;
+}
+.div5 {
+  animation-timing-function: ease-in-out;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: lightblue;
+  font-size: 30px;
+  border: 0;
+  margin: 2rem;
+  font-weight: bold;
+
+  transition-property: background-color, padding;
+  transition-duration: 500ms;
+}
+
+.btn:hover {
+  background-color: rgba(29, 179, 248, 0.801);
+  padding-inline: 30px;
+}
