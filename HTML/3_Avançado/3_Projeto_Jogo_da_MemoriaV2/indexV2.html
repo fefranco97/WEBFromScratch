@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts/game.js"></script>
-    <script src="scripts/interface.js"></script>
+    <script src="scripts/gameV2.js"></script>
+    <script src="scripts/interfaceV2.js"></script>
     <link rel="stylesheet" href="styles/style.css" />
     <title>Jogo da memoria</title>
 </head>
 
 
 <body>
-    <div class="gameBoard">
+    <div id="gameBoard">
     </div>
 
     <div id="gameOver">
         <div>Parabéns, você completou o Jogo!</div>
-        <button id="restart" onclick="restartGame()" type="button">Jogue Novamente</button>
+        <button id="restart" onclick="restart()" type="button">Jogue Novamente</button>
     </div>
 
 

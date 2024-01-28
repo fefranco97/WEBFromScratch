@@ -26,7 +26,7 @@ body {
   background-color: #c7cdd3;
 }
 
-.gameBoard {
+#gameBoard {
   max-width: 800px;
   display: grid;
   grid-template: repeat(5, 1fr) / repeat(4, 1fr);
@@ -39,7 +39,6 @@ body {
   margin: 0.5rem;
   transform-style: preserve-3d;
   transition: transform 500ms;
-  user-select: none;
 }
 
 .card_back,
@@ -99,9 +98,4 @@ body {
   margin-top: 2rem;
   font-weight: bold;
   border-radius: 10px;
-}
-
-#restart:hover {
-  cursor: pointer;
-  background-color: rgb(114, 114, 0);
 }

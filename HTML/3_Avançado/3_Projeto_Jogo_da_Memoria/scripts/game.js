@@ -7,8 +7,6 @@ class Card {
   }
 }
 
-const boardSize = 20;
-
 let techs = [
   "bootstrap",
   "css",
@@ -23,11 +21,67 @@ let techs = [
 ];
 
 let cards = null;
+let lockMode = false;
 
-function startGame() {
-  cards = createCardsFromTechs(techs);
-  suffleCards(cards);
-  createBoardWithSuffledCards(cards);
+let fristCard = null;
+let secondCard = null;
+
+function setCard(cards, idCard) {
+  let card = cards.filter((card) => card.id === idCard)[0];
+  if (card.flipped || lockMode) {
+    return false;
+  }
+
+  if (!fristCard) {
+    fristCard = card;
+    fristCard.flipped = true;
+    return true;
+  } else {
+    secondCard = card;
+    secondCard.flipped = true;
+    lockMode = true;
+    return true;
+  }
+}
+
+function checkMatch() {
+  if (!fristCard || !secondCard) {
+    return false;
+  }
+  return fristCard.name === secondCard.name;
+}
+
+function clearCards() {
+  fristCard = null;
+  secondCard = null;
+  lockMode = false;
+}
+
+function unflipCards() {
+  fristCard.flipped = false;
+  secondCard.flipped = false;
+  clearCards();
+}
+
+function checkGameOver() {
+  return cards.filter((card) => !card.flipped).length === 0;
+}
+
+function createCardsFromTechs(techs) {
+  let cards = [];
+  techs.forEach((tech) => {
+    cards.push(createPairFromTech(tech));
+  });
+  return cards.flatMap((pair) => pair);
+}
+
+function createPairFromTech(tech) {
+  return [createCardFromTech(tech), createCardFromTech(tech)];
+}
+
+function createCardFromTech(tech) {
+  let randomId = createRandomUUID();
+  return new Card(randomId, tech, `assets/${tech}.png`, false);
 }
 
 function suffleCards(cards) {
@@ -43,29 +97,6 @@ function suffleCards(cards) {
       cards[randomIndex],
     ];
   }
-}
-
-function createBoardWithSuffledCards(cards) {
-  cards.forEach((card) => {
-    renderCardOnGameBoard(card);
-  });
-}
-
-function createCardsFromTechs(techs) {
-  let cards = [];
-  techs.forEach((tech) => {
-    cards.push(createPairFromTech(tech));
-  });
-  return cards.flatMap((pair) => pair);
-}
-
-function createCardFromTech(tech) {
-  let randomId = createRandomUUID();
-  return new Card(randomId, tech, `assets/${tech}.png`, false);
-}
-
-function createPairFromTech(tech) {
-  return [createCardFromTech(tech), createCardFromTech(tech)];
 }
 
 function createRandomUUID() {
