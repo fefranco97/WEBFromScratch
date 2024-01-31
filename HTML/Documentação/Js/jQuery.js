@@ -14,5 +14,30 @@ $(() => {
   // como o exemplo a abaixo:
   jq.slideUp("slow").slideDown().fadeOut("slow").fadeIn("slow");
 
-  console.log(jq);
+  // Manipulando DOM com o jQuery
+  $("#testeJquery4").children("h1").text("Meu Input Alterado");
+  $("#valor").on("change", () => {
+    // Cria um eventHandler de change
+    console.log($("#valor").val());
+  });
+  $("#valor").val("Item Novo Rapazeada");
+  console.log($("#valor").attr("name")); // Captura atributos da tag via jQuery
+  console.log($("#valor").attr("name", "Nome Antigo")); // Altera o valor do atributos da tag via jQuery
+
+  //.html cria Elementos HTML
+  $("#lista2").html(
+    "<li>Novo item 1</li><li>Novo item 2</li><li>Novo item 3</li>"
+  );
+
+  //.text adiciona um texto dentro do HTML, sem criar os elementos
+  $("#lista3").text(
+    "<li>Novo item 1</li><li>Novo item 2</li><li>Novo item 3</li>"
+  );
+
+  // ALtera o atributo nome dos inputs para o valor + um index
+  $("#lista4")
+    .children("li")
+    .attr("name", (index, oValue) => {
+      return oValue + index;
+    });
 });
