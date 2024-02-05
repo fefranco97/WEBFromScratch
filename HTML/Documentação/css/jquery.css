@@ -64,3 +64,13 @@ hr {
 .bg-contrast {
   background-color: #47bb50 !important;
 }
+
+.box {
+  width: 500px;
+  background-color: gray;
+  padding: 10px;
+  border: 5px solid #000;
+  margin: 15px;
+  color: white;
+  font-size: 20px;
+}

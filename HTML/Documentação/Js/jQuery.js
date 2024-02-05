@@ -89,4 +89,18 @@ $(() => {
     let key = button.attributes["key"].value;
     $(`[key = ${key}]`).on("click", clickHandler);
   }
+
+  //Css Dimensions com Jquery
+
+  let box = $(".box");
+  box.append(
+    "Largura:",
+    box.width(),
+    "<br>Largura + padding:",
+    box.innerWidth(),
+    "<br>Largura + padding + borda:",
+    box.outerWidth(),
+    "<br>Largura + padding + borda + margem:",
+    box.outerWidth(true)
+  );
 });
