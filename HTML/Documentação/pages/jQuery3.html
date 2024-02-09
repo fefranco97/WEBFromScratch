@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/resp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Carrega o JQueryUi -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+
+    <title>Jquery 3</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="div1">Div 1</div>
+        <div id="div2">Div 2</div>
+        <div id="div3">Div 3</div>
+        <div id="div4">Div 4</div>
+        <div id="div5">Div 5</div>
+    </div>
+    <div>
+        <div id="div6">Div 6</div>
+        <div id="div7">Div 7</div>
+        <div id="div8">Div 8</div>
+        <div id="div9">Div 9</div>
+        <div id="div10">Div 10</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+
+        let selected = $("#div1")
+        let selected2 = $("#div5")
+        let contaier = $("#container")
+
+        console.log(selected.siblings()); // Pega todos os elementos que possuem o mesmo elemento Pai
+        console.log(selected.nextAll()); // Pega todos os elementos que estão a seguir do elemento selecionado e que possuem o mesmo pai
+        console.log(selected.next()); // Pega o elemento seguinte ao elemento selecionado
+
+        console.log(selected.prev()); // Pega o elemento anterior ao elemento selecionado
+        console.log(selected.prevAll()); // Pega todos os elementos que estão a anterior do elemento selecionado e que possuem o mesmo pai
+
+        console.log(selected.nextUntil("#div4")); // Pega todos os elementos que estão a seguir do elemento selecionado e que possuem o mesmo pai até o elemento fornecido
+        console.log(selected2.prevUntil("#div2")); // Pega todos os elementos que estão a anterior do elemento selecionado e que possuem o mesmo pai até o elemento fornecido
+
+        console.log(contaier.children().eq(2)) // Seleciona o elemento pelo Index dele no Array do elemento Pai
+
+
+    </script>
+
+
+</body>
+
+</html>

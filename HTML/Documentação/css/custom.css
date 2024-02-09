@@ -1,0 +1,19 @@
+:root,
+[data-bs-theme='light'] {
+  --bs-primary-rgb: 13, 110, 253;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+}
+
+.square1 {
+  width: 400px;
+  height: 400px;
+}
+
+.square2 {
+  width: 75px;
+  height: 75px;
+}
