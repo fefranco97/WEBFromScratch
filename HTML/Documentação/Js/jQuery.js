@@ -91,13 +91,12 @@ $(() => {
   }
 
   //Css Dimensions com Jquery
-
   let box = $(".box");
   box.append(
     "Largura:",
-    box.width(),
+    box.width(), // Captura a largura interna do elemento
     "<br>Largura + padding:",
-    box.innerWidth(),
+    box.innerWidth(), // Captura a largura interna do elemento com os espaçamentos internos
     "<br>Largura + padding + borda:",
     box.outerWidth(),
     "<br>Largura + padding + borda + margem:",
