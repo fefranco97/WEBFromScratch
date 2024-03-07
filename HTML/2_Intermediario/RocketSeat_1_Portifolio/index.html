@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Portifolio</title>
   </head>
@@ -11,41 +16,96 @@
       <div class="side-container">
         <div class="card">
           <span class="circle"></span>
-          <p>Felipe Franco de Camargo</p>
+          <h3>Felipe Franco de Camargo</h3>
           <p class="footer-text">Full Stack Developer</p>
         </div>
-        <div class="card"><p>Teste 1</p></div>
-        <div class="card"><p>Teste 1</p></div>
-        <div class="card"><p>Teste 1</p></div>
-        <div class="card"><p>Teste 1</p></div>
+        <div class="card">
+          <div class="text-icon">
+            <img class="icon" src="assets/map-pin.svg" alt="Map-pin Icon" />
+            <p>Brazil</p>
+          </div>
+          <div class="text-icon">
+            <img class="icon" src="assets/briefcase.svg" alt="briefcase Icon" />
+            <p>Banco Itau</p>
+          </div>
+          <div class="text-icon">
+            <img class="icon" src="assets/github.svg" alt="Github Icon" />
+            <a href="https://github.com/fefranco97" target="_blank">fefranco97</a>
+          </div>
+          <div class="text-icon">
+            <img class="icon" src="assets/linkedin.svg" alt="linkedin Icon" />
+            <a href="https://www.linkedin.com/in/felipe-franco-camargo/" target="_blank"
+              >felipe-franco-camargo</a
+            >
+          </div>
+          <div class="text-icon">
+            <img class="icon" src="assets/mail.svg" alt=" e-mail Icon" />
+            <a href="mailto:fe.franco97@gmail.com">fe.franco97@gmail.com</a>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Stacks</h2>
+          <div class="stacks-container">
+            <span class="techs">JavaScript</span>
+            <span class="techs">HTML</span>
+            <span class="techs">CSS</span>
+            <span class="techs">React</span>
+            <span class="techs">NodeJs</span>
+            <span class="techs">Git</span>
+            <span class="techs">GitHub</span>
+            <span class="techs">Python</span>
+          </div>
+        </div>
       </div>
       <div class="container">
         <div class="card">
           <div class="my-projects">
-            <p>My Projects</p>
-            <p>See all</p>
+            <h2>My Projects</h2>
+            <a href="https://github.com/fefranco97" target="_blank">See all</a>
           </div>
         </div>
-        <div class="grid-container">
-          <div class="card">
-            <p>Projeto 1</p>
-          </div>
-          <div class="card">
-            <p>Projeto 2</p>
-          </div>
-        </div>
+        <div id="projects-container" class="grid-container"></div>
         <div class="card">
           <div class="recent-posts">
-            <p>Recent Posts</p>
+            <h2>Work History</h2>
           </div>
         </div>
         <div class="posts">
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
+          <div class="card">
+            <h2>Software Engineer</h2>
+            <p>Itaú Unibanco, São Paulo, Brazil</p>
+            <p>2022-04 - Current</p>
+          </div>
+          <div class="card">
+            <h2>Senior Analyst</h2>
+            <p>F1rst Tecnologia Brasil(Santander Tecnologia Brasil), São Paulo, Brazil</p>
+            <p>2022-01 - 2022-04</p>
+          </div>
+          <div class="card">
+            <h2>Analyst</h2>
+            <p>Santander Tecnologia Brasil, São Paulo, Brazil</p>
+            <p>2020-06 - 2022-01</p>
+          </div>
+          <div class="card">
+            <h2>Junior Analyst</h2>
+            <p>Santander Tecnologia Brasil, São Paulo, Brazil</p>
+            <p>2019-08 - 2020-01</p>
+          </div>
+          <div class="card">
+            <h2>Money Laundering Prevention Intern</h2>
+            <p>Santander Brasil, São Paulo, Brazil</p>
+            <p>2018-08 - 2019-07</p>
+          </div>
+          <div class="card">
+            <h2>IT Intern</h2>
+            <p>Prodam, São Paulo, Brazil</p>
+            <p>2017-01 - 2018-01</p>
+          </div>
         </div>
       </div>
     </div>
   </body>
+
+  <script src="scripts/gitHubModel.js"></script>
+  <script src="scripts/script.js"></script>
 </html>
