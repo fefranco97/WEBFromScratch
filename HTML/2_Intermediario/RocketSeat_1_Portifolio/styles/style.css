@@ -145,7 +145,6 @@ h3 {
   display: flex;
   gap: 0.55rem;
   flex-direction: column;
-  align-content: center;
 }
 
 .project-content {

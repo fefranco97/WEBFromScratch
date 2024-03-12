@@ -3,12 +3,13 @@ let gitHubObject = {
   getAllGitHubProjects: function () {
     return this.gitHubProjects
   },
-  setGitHubProject: function (id, name, language, description, stars, watchers) {
+  setGitHubProject: function (id, name, language, description, url, stars, watchers) {
     const newGitHubProject = {
       id,
       name,
       language,
       description,
+      url,
       stars,
       watchers,
     }

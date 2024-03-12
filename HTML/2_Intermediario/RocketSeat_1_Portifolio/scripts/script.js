@@ -15,6 +15,7 @@ async function setProjects() {
       project.name,
       project.language,
       project.description,
+      project.svn_url,
       project.stargazers_count,
       project.watchers_count
     )
@@ -42,7 +43,7 @@ function renderFristAndSecondProject(projects) {
 }
 
 function createNewProjectElement(project) {
-  const html = `<a href="" target="_blank">
+  const html = `<a href="${project.url}" target="_blank">
             <div class="card">
               <div class="project-container">
                 <div class="project-header">
@@ -70,3 +71,30 @@ function createNewProjectElement(project) {
 }
 
 setProjects()
+
+var isValid = function (s) {
+  const stack = []
+  const mapping = new Object({
+    ')': '(',
+    '}': '{',
+    ']': '[',
+  })
+  for (var char of s) {
+    if (Object.values(mapping).includes(char)) {
+      stack.push(char)
+    } else if (Object.keys(mapping).includes(char)) {
+      const fristElement = stack.pop()
+      if (mapping[char] !== fristElement) {
+        return false
+      }
+    } else {
+      return false
+    }
+  }
+  return stack.length === 0
+}
+
+let s = ''
+
+if (isValid(s)) console.log('valid')
+else console.log('invalid')
